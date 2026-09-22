@@ -18,4 +18,4 @@ def home():
     }
 
 
-app.mount("/mcp", mcp.streamable_http_app())
+app.mount("/mcp/", mcp.streamable_http_app())
