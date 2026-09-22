@@ -5,9 +5,6 @@ mcp = FastMCP("Simple Text MCP HTTP")
 
 @mcp.tool()
 def echo_text(text: str) -> dict:
-    """
-    Return the submitted text.
-    """
     return {"text": text}
 
 
@@ -21,5 +18,4 @@ def home():
     }
 
 
-# MCP endpoint
 app.mount("/mcp", mcp.streamable_http_app())
