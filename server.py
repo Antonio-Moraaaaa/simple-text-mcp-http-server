@@ -21,5 +21,5 @@ def home():
     }
 
 
-# MCP Streamable HTTP endpoint
+# MCP endpoint
 app.mount("/mcp", mcp.streamable_http_app())
