@@ -1,21 +1,10 @@
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-
 [project]
 name = "simple-text-mcp-http-server"
 version = "0.1.0"
-description = "Simple MCP server with Streamable HTTP transport."
-readme = "README.md"
+description = "Simple MCP HTTP Server"
 requires-python = ">=3.10"
-
 dependencies = [
-    "mcp",
     "fastapi",
-    "uvicorn"
+    "uvicorn",
+    "mcp"
 ]
-
-
-[project.scripts]
-simple-text-mcp-http = "server:main"
