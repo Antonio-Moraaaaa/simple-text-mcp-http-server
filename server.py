@@ -1,4 +1,3 @@
-from fastapi import FastAPI
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
@@ -12,12 +11,4 @@ def echo_text(text: str) -> dict:
         "text": text
     }
 
-app = FastAPI()
-
-@app.get("/")
-def home():
-    return {
-        "status": "Simple Text MCP HTTP running"
-    }
-
-app.mount("/mcp", mcp.streamable_http_app())
+app = mcp.streamable_http_app()
