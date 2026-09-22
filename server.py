@@ -12,7 +12,6 @@ def echo_text(text: str) -> dict:
         "text": text
     }
 
-
 app = FastAPI()
 
 @app.get("/")
@@ -21,8 +20,4 @@ def home():
         "status": "Simple Text MCP HTTP running"
     }
 
-
-app.mount(
-    "/mcp",
-    mcp.streamable_http_app()
-)
+app.mount("/mcp", mcp.streamable_http_app())
